@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Token Launch Radar</title><link rel="stylesheet" href="app.css"></head>
+<body>
+<div id="app">
+<header><h1>&#x1F6F0;&#xFE0F; Token Launch Radar</h1>
+<p class="sub">Pre-token protocols ranked by implied launch value &middot; Model: <span id="mv"></span> &middot; Snapshot: <span id="sd"></span></p>
+<div class="filters">
+<select id="catFilter"><option value="">All categories</option></select>
+<select id="chainFilter"><option value="">All chains</option></select>
+<input type="text" id="search" placeholder="Search protocols...">
+<span id="count" class="count"></span>
+</div></header>
+<main><table id="board"><thead><tr>
+<th>#</th><th>Protocol</th><th>Category</th><th>Chains</th><th>TVL</th><th>7d</th><th>Implied Value</th><th>Farm Plan</th>
+</tr></thead><tbody id="rows"></tbody></table></main>
+<div id="detail" class="detail hidden"><button id="closeDetail">&times;</button><div id="detailContent"></div></div>
+<footer>Data: DefiLlama snapshot &middot; Implied values are model estimates, not financial advice</footer>
+</div>
+<script src="data.js"></script><script src="app.js"></script>
+</body></html>
